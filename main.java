@@ -8,7 +8,7 @@ public class main {
 
     static double grade = 0.0;
     static String[][] student = new String[100][3];// surname,student number,grade
-    static int x = 0;// table column , each one represents one student
+    static int x = -1;// table column , each one represents one student
 
     public static void main(String[] args) {
 
@@ -81,11 +81,7 @@ public class main {
         ocd.add(submit);
         submit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
-                if (x != 0) {
-                    x++;
-                }
-
+                x++;
                 student[x][0] = stext.getText();
                 student[x][1] = ntext.getText();
                 student[x][2] = String.format("%f", grade);
@@ -98,4 +94,5 @@ public class main {
         });
 
     }
+
 }
